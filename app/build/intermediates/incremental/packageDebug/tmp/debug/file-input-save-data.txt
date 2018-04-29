@@ -1,0 +1,27 @@
+#Internal package file, do not edit.
+#Sun Apr 29 16:14:12 CST 2018
+2.base=D\:\\Android\\android-tutorial-53\\app\\build\\intermediates\\assets\\debug
+5.set=ASSET
+0.path=lib/armeabi-v7a/libtutorial-5.so
+2.baseType=DIRECTORY
+3.base=D\:\\Android\\android-tutorial-53\\app\\build\\intermediates\\assets\\debug
+2.set=ASSET
+1.path=lib/armeabi-v7a/libgstreamer_android.so
+4.base=D\:\\Android\\android-tutorial-53\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+count=6
+5.baseType=DIRECTORY
+2.path=ssl/certs/ca-certificates.crt
+5.base=D\:\\Android\\android-tutorial-53\\app\\build\\intermediates\\assets\\debug
+4.set=DEX
+3.path=fontconfig/fonts.conf
+3.baseType=DIRECTORY
+1.set=NATIVE_RESOURCE
+4.path=classes.dex
+1.baseType=DIRECTORY
+5.path=fontconfig/fonts/truetype/Ubuntu-R.ttf
+0.base=D\:\\Android\\android-tutorial-53\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+0.baseType=DIRECTORY
+3.set=ASSET
+1.base=D\:\\Android\\android-tutorial-53\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+4.baseType=DIRECTORY
+0.set=NATIVE_RESOURCE

@@ -1,0 +1,111 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:1-97:12
+	package
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:8:9-34
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:12:22-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:13:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:14:22-78
+uses-feature#0x00020000
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:17:5-54
+	android:glEsVersion
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:17:19-51
+application
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:19:5-95:19
+	android:label
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:21:9-41
+	android:icon
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:20:9-50
+activity#com.gst_sdk_tutorials.tutorial_5.Tutorial5
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:22:9-90:20
+	android:label
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:24:13-45
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:23:13-38
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:26:13-30:29
+action#android.intent.action.MAIN
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:27:17-69
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:27:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:29:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:mimeType:audio/*+data:mimeType:image/*+data:mimeType:video/*
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:33:13-42:29
+action#android.intent.action.VIEW
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:34:25-66
+category#android.intent.category.DEFAULT
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:36:27-73
+category#android.intent.category.BROWSABLE
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:37:17-78
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:37:27-75
+data
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:39:17-52
+	android:scheme
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:52:23-44
+	android:pathPattern
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:54:23-53
+	android:mimeType
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:39:23-49
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:mimeType:*/*+data:pathPattern:.*\\.AVI+data:pathPattern:.*\\.MKV+data:pathPattern:.*\\.MOV+data:pathPattern:.*\\.MP4+data:pathPattern:.*\\.OGV+data:pathPattern:.*\\.WEBM+data:pathPattern:.*\\.avi+data:pathPattern:.*\\.mkv+data:pathPattern:.*\\.mov+data:pathPattern:.*\\.mp4+data:pathPattern:.*\\.ogv+data:pathPattern:.*\\.webm+data:scheme:file
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:46:13-66:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:pathPattern:.*\\.AVI+data:pathPattern:.*\\.MKV+data:pathPattern:.*\\.MOV+data:pathPattern:.*\\.MP4+data:pathPattern:.*\\.OGV+data:pathPattern:.*\\.WEBM+data:pathPattern:.*\\.avi+data:pathPattern:.*\\.mkv+data:pathPattern:.*\\.mov+data:pathPattern:.*\\.mp4+data:pathPattern:.*\\.ogv+data:pathPattern:.*\\.webm+data:scheme:http
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:70:13-89:29
+activity#com.lamerman.FileDialog
+ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:91:9-94:20
+	android:label
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:93:13-53
+	android:name
+		ADDED from D:\Android\android-tutorial-53\app\src\main\AndroidManifest.xml:92:13-51

@@ -1,0 +1,23 @@
+{
+  "buildFiles": [
+    "D:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Android.mk",
+    "D:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Application.mk"
+  ],
+  "cleanCommands": [
+    "D:\\ndk\\ndk\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003dD:/Android/android-tutorial-53/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\android-tutorial-53\\app\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "libraries": {
+    "gstreamer_android-release-gst-build-armeabi-v7a": {
+      "artifactName": "gstreamer_android",
+      "buildCommand": "D:\\ndk\\ndk\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003dD:/Android/android-tutorial-53/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\android-tutorial-53\\app\\build\\intermediates\\ndkBuild\\release\\lib gst-build-armeabi-v7a/libgstreamer_android.so",
+      "abi": "gst-build-armeabi-v7a",
+      "output": "gst-build-armeabi-v7a\\libgstreamer_android.so"
+    },
+    "tutorial-5-release-armeabi-v7a": {
+      "artifactName": "tutorial-5",
+      "buildCommand": "D:\\ndk\\ndk\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\android-tutorial-53\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003dD:/Android/android-tutorial-53/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\android-tutorial-53\\app\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/android-tutorial-53/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libtutorial-5.so",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Android\\android-tutorial-53\\app\\build\\intermediates\\ndkBuild\\release\\obj\\local\\armeabi-v7a\\libtutorial-5.so"
+    }
+  }
+}
