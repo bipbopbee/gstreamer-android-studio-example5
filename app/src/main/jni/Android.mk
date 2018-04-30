@@ -27,6 +27,7 @@ $(error Target arch ABI not supported: $(TARGET_ARCH_ABI))
 endif
 GSTREAMER_NDK_BUILD_PATH  := $(GSTREAMER_ROOT)/share/gst-android/ndk-build
 include $(GSTREAMER_NDK_BUILD_PATH)/plugins.mk
+#增加多个插件包，防止出现miss plug-in error
 GSTREAMER_PLUGINS         := $(GSTREAMER_PLUGINS_CORE) $(GSTREAMER_PLUGINS_PLAYBACK) $(GSTREAMER_PLUGINS_CODECS) $(GSTREAMER_PLUGINS_NET) $(GSTREAMER_PLUGINS_SYS) $(GSTREAMER_PLUGINS_CODECS_RESTRICTED)
 G_IO_MODULES              := gnutls
 GSTREAMER_EXTRA_DEPS      := gstreamer-video-1.0
