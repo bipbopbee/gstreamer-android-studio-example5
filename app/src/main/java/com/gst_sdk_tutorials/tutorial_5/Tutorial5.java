@@ -44,7 +44,7 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
     private int desired_position;         // Position where the users wants to seek to
     private String mediaUri;              // URI of the clip being played
 
-    private final String defaultMediaUri = "http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8";
+    private final String defaultMediaUri = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
 
     static private final int PICK_FILE_CODE = 1;
     private String last_folder;
