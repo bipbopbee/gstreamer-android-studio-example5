@@ -42,6 +42,12 @@
             android:contentDescription="@string/button_select"
             android:src="@android:drawable/ic_media_next"
             android:text="@string/button_select" />
+        <ImageButton
+            android:id="@+id/button_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"
+            android:text="record"/>
     </LinearLayout>
 
     <LinearLayout
@@ -70,6 +76,11 @@
 
     <com.gst_sdk_tutorials.tutorial_5.GStreamerSurfaceView
         android:id="@+id/surface_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal" />
+    <com.gst_sdk_tutorials.tutorial_5.GStreamerSurfaceView
+        android:id="@+id/surface_local_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal" />
