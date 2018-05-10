@@ -1,6 +1,7 @@
 package com.gst_sdk_tutorials.tutorial_5;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -8,6 +9,9 @@ import java.util.TimeZone;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.hardware.Camera;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.PowerManager;
@@ -37,6 +41,7 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
     private native void nativeSurfaceFinalize(); // Surface about to be destroyed
     private long native_custom_data;      // Native code will use this to keep private data
 
+    private native void nativeSetVideoBuffer(byte[] buffers, int width, int height);
     private boolean is_playing_desired;   // Whether the user asked to go to PLAYING
     private int position;                 // Current position, reported by native code
     private int duration;                 // Current clip duration, reported by native code
@@ -50,7 +55,8 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
     private String last_folder;
 
     private PowerManager.WakeLock wake_lock;
-
+    private Camera camera;
+    private boolean isPreview = false;
     // Called when the activity is first created.
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -99,9 +105,60 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
             }
         });
 
+        ImageButton push_stream = (ImageButton)this.findViewById(R.id.button_record);
+        push_stream.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         SurfaceView sv = (SurfaceView) this.findViewById(R.id.surface_video);
         SurfaceHolder sh = sv.getHolder();
         sh.addCallback(this);
+
+        SurfaceView local_video = (SurfaceView)this.findViewById(R.id.surface_local_video);
+        final SurfaceHolder local_video_prview = local_video.getHolder();
+        local_video_prview.setFormat(PixelFormat.YCbCr_420_SP);
+        local_video_prview.addCallback(new SurfaceHolder.Callback() {
+            @Override
+            public void surfaceCreated(SurfaceHolder surfaceHolder) {
+                try {
+
+                    camera = Camera.open();
+                    Camera.Parameters parameters = camera.getParameters();
+                    parameters.setPreviewFormat(PixelFormat.YCbCr_420_SP);
+                    parameters.setPreviewSize(320,240);
+                    camera.setParameters(parameters);
+                    camera.setPreviewDisplay(local_video_prview);
+                    camera.setPreviewCallback(new Camera.PreviewCallback() {
+                        @Override
+                        public void onPreviewFrame(byte[] bytes, Camera camera) {
+                            nativeSetVideoBuffer(bytes,320,240);
+                        }
+                    });
+                    camera.startPreview();
+                    isPreview = true;
+                } catch (IOException e){
+                    Log.d("sushuai","dkjkjl");
+                }
+            }
+
+            @Override
+            public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
+                if (camera != null){
+                    if(isPreview) {
+                        camera.stopPreview();
+                        camera.release();
+                        isPreview = false;
+                    }
+                }
+            }
+        });
 
         SeekBar sb = (SeekBar) this.findViewById(R.id.seek_bar);
         sb.setOnSeekBarChangeListener(this);
@@ -174,7 +231,7 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
 
     // Set the URI to play, and record whether it is a local or remote file
     private void setMediaUri() {
-        nativeSetUri (mediaUri);
+        //nativeSetUri (mediaUri);
         is_local_media = mediaUri.startsWith("file://");
     }
 
@@ -185,8 +242,8 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
         Log.i ("GStreamer", "  playing:" + is_playing_desired + " position:" + position + " uri: " + mediaUri);
 
         // Restore previous playing state
-        setMediaUri ();
-        nativeSetPosition (position);
+        //setMediaUri ();
+        //nativeSetPosition (position);
         if (is_playing_desired) {
             nativePlay();
             wake_lock.acquire();
@@ -278,7 +335,7 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
         if (fromUser == false) return;
         desired_position = progress;
         // If this is a local file, allow scrub seeking, this is, seek as soon as the slider is moved.
-        if (is_local_media) nativeSetPosition(desired_position);
+        //if (is_local_media) nativeSetPosition(desired_position);
         updateTimeWidget();
     }
 
@@ -291,7 +348,7 @@ public class Tutorial5 extends Activity implements SurfaceHolder.Callback, OnSee
     public void onStopTrackingTouch(SeekBar sb) {
         // If this is a remote file, scrub seeking is probably not going to work smoothly enough.
         // Therefore, perform only the seek when the slider is released.
-        if (!is_local_media) nativeSetPosition(desired_position);
+        //if (!is_local_media) nativeSetPosition(desired_position);
         if (is_playing_desired) nativePlay();
     }
 
